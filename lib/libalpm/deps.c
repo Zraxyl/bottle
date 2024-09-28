@@ -181,15 +181,6 @@ static void _alpm_warn_dep_cycle(alpm_handle_t *handle, alpm_list_t *targets,
 	} else {
 		alpm_pkg_t *ancestorpkg = ancestor->data;
 		alpm_pkg_t *childpkg = vertex->data;
-		if(reverse) {
-			_alpm_log(handle, ALPM_LOG_WARNING,
-					_("%s will be removed after its %s dependency\n"),
-					ancestorpkg->name, childpkg->name);
-		} else {
-			_alpm_log(handle, ALPM_LOG_WARNING,
-					_("%s will be installed before its %s dependency\n"),
-					ancestorpkg->name, childpkg->name);
-		}
 	}
 }
 
