@@ -50,7 +50,7 @@ source_makepkg_config() {
 
 	# Source user-specific makepkg.conf overrides, but only if no override config
 	# file was specified
-	XDG_PACMAN_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/pacman"
+	XDG_PACMAN_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/bottle"
 	if [[ $MAKEPKG_CONF = "@sysconfdir@/makepkg.conf" ]]; then
 		if [[ -r $XDG_PACMAN_DIR/makepkg.conf ]]; then
 			source_safe "$XDG_PACMAN_DIR/makepkg.conf"

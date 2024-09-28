@@ -1,5 +1,5 @@
 /*
- *  testpkg.c : Test a pacman package for validity
+ *  testpkg.c : Test a bottle package for validity
  *
  *  Copyright (c) 2007-2024 Pacman Development Team <pacman-dev@lists.archlinux.org>
  *  Copyright (c) 2007 by Aaron Griffin <aaronmgriffin@gmail.com>
@@ -52,8 +52,8 @@ int main(int argc, char *argv[])
 #endif
 
 	if(argc != 2) {
-		fprintf(stderr, "testpkg (pacman) v" PACKAGE_VERSION "\n\n");
-		fprintf(stderr,	_("Test a pacman package for validity.\n\n"));
+		fprintf(stderr, "testpkg (bottle) v" PACKAGE_VERSION "\n\n");
+		fprintf(stderr,	_("Test a bottle package for validity.\n\n"));
 		fprintf(stderr,	_("Usage: testpkg <package file>\n"));
 		return 1;
 	}

@@ -1,8 +1,8 @@
 i18n.gettext(
-  'pacman-scripts',
+  'bottle-scripts',
   args : [
     '--directory=@0@'.format(meson.current_source_dir()),
-    '--msgid-bugs-address=https://gitlab.archlinux.org/pacman/pacman/-/issues',
+    '--msgid-bugs-address=https://gitlab.archlinux.org/bottle/bottle/-/issues',
     '--copyright-holder="Pacman Development Team <pacman-dev@lists.archlinux.org>"',
     '--language', 'shell',
 

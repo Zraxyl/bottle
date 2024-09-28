@@ -1,5 +1,5 @@
 /*
- *  vercmp.c - Compare package version numbers using pacman's version
+ *  vercmp.c - Compare package version numbers using bottle's version
  *      comparison logic
  *
  *  Copyright (c) 2006-2024 Pacman Development Team <pacman-dev@lists.archlinux.org>
@@ -29,8 +29,8 @@ int alpm_pkg_vercmp(const char *a, const char *b);
 
 static void usage(void)
 {
-	fprintf(stderr, "vercmp (pacman) v" PACKAGE_VERSION "\n\n"
-		"Compare package version numbers using pacman's version comparison logic.\n\n"
+	fprintf(stderr, "vercmp (bottle) v" PACKAGE_VERSION "\n\n"
+		"Compare package version numbers using bottle's version comparison logic.\n\n"
 		"Usage: vercmp <ver1> <ver2>\n\n"
 		"Output values:\n"
 		"  < 0 : if ver1 < ver2\n"

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#   makepkg - make packages compatible for use with pacman
+#   makepkg - make packages compatible for use with bottle
 #
 #   Copyright (c) 2006-2024 Pacman Development Team <pacman-dev@lists.archlinux.org>
 #   Copyright (c) 2002-2006 by Judd Vinet <jvinet@zeroflux.org>
@@ -30,7 +30,7 @@
 #   gettext, gpg, grep, gzip, sed, tput (ncurses), xz
 
 # gettext initialization
-export TEXTDOMAIN='pacman-scripts'
+export TEXTDOMAIN='bottle-scripts'
 export TEXTDOMAINDIR='@localedir@'
 
 # file -i does not work on Mac OSX unless legacy mode is set
@@ -229,7 +229,7 @@ missing_source_file() {
 	exit $E_MISSING_FILE
 }
 
-run_pacman() {
+run_bottle() {
 	local cmd cmdescape
 	if [[ $1 = -@(T|Q)*([[:alpha:]]) ]]; then
 		cmd=("$PACMAN_PATH" "$@")
@@ -247,10 +247,10 @@ run_pacman() {
 		else
 			cmd=(su root -c "$cmdescape")
 		fi
-		local lockfile="$(pacman-conf DBPath)/db.lck"
+		local lockfile="$(bottle-conf DBPath)/db.lck"
 		while [[ -f $lockfile ]]; do
 			local timer=0
-			msg "$(gettext "Pacman is currently in use, please wait...")"
+			msg "$(gettext "Bottle is currently in use, please wait...")"
 			while [[ -f $lockfile ]] && (( timer < 10 )); do
 				(( ++timer ))
 				sleep 3
@@ -265,7 +265,7 @@ check_deps() {
 
 	local ret=0
 	local pmout
-	pmout=$(run_pacman -T "$@")
+	pmout=$(run_bottle -T "$@")
 	ret=$?
 
 	if (( ret == 127 )); then #unresolved deps
@@ -289,10 +289,10 @@ handle_deps() {
 	fi
 
 	if (( DEP_BIN )); then
-		# install missing deps from binary packages (using pacman -S)
+		# install missing deps from binary packages (using bottle -S)
 		msg "$(gettext "Installing missing dependencies...")"
 
-		if ! run_pacman -S --asdeps "${deplist[@]}"; then
+		if ! run_bottle -S --asdeps "${deplist[@]}"; then
 			error "$(gettext "'%s' failed to install missing dependencies.")" "$PACMAN"
 			return $R_DEPS_MISSING
 		fi
@@ -357,7 +357,7 @@ remove_deps() {
 
 	msg "Removing installed dependencies..."
 	# exit cleanly on failure to remove deps as package has been built successfully
-	if ! run_pacman -Rnu ${deplist[@]}; then
+	if ! run_bottle -Rnu ${deplist[@]}; then
 		warning "$(gettext "Failed to remove installed dependencies.")"
 		return $E_REMOVE_DEPS_FAILED
 	fi
@@ -550,7 +550,7 @@ write_buildinfo() {
 	write_kv_pair "buildenv" "${BUILDENV[@]}"
 	write_kv_pair "options" "${OPTIONS[@]}"
 
-	local pkginfos_parsed=($(LC_ALL=C run_pacman -Qi | awk -F': ' '\
+	local pkginfos_parsed=($(LC_ALL=C run_bottle -Qi | awk -F': ' '\
 		/^Name .*/ {printf "%s", $2} \
 		/^Version .*/ {printf "-%s", $2} \
 		/^Architecture .*/ {print "-"$2} \
@@ -773,7 +773,7 @@ install_package() {
 		fi
 	done
 
-	if ! run_pacman -U "${pkglist[@]}"; then
+	if ! run_bottle -U "${pkglist[@]}"; then
 		warning "$(gettext "Failed to install built package(s).")"
 		return $E_INSTALL_FAILED
 	fi
@@ -871,9 +871,9 @@ run_split_packaging() {
 }
 
 usage() {
-	printf "makepkg (pacman) %s\n" "$makepkg_version"
+	printf "makepkg (bottle) %s\n" "$makepkg_version"
 	echo
-	printf -- "$(gettext "Make packages compatible for use with pacman")\n"
+	printf -- "$(gettext "Make packages compatible for use with bottle")\n"
 	echo
 	printf -- "$(gettext "Usage: %s [options]")\n" "$0"
 	echo
@@ -894,7 +894,7 @@ usage() {
 	printf -- "$(gettext "  -p <file>        Use an alternate build script (instead of '%s')")\n" "$BUILDSCRIPT"
 	printf -- "$(gettext "  -r, --rmdeps     Remove installed dependencies after a successful build")\n"
 	printf -- "$(gettext "  -R, --repackage  Repackage contents of the package without rebuilding")\n"
-	printf -- "$(gettext "  -s, --syncdeps   Install missing dependencies with %s")\n" "pacman"
+	printf -- "$(gettext "  -s, --syncdeps   Install missing dependencies with %s")\n" "bottle"
 	printf -- "$(gettext "  -S, --source     Generate a source-only tarball without downloaded sources")\n"
 	printf -- "$(gettext "  -V, --version    Show version information and exit")\n"
 	printf -- "$(gettext "  --allsource      Generate a source-only tarball including downloaded sources")\n"
@@ -914,7 +914,7 @@ usage() {
 	printf -- "$(gettext "  --skippgpcheck   Do not verify source files with PGP signatures")\n"
 	printf -- "$(gettext "  --verifysource   Download source files (if needed) and perform integrity checks")\n"
 	echo
-	printf -- "$(gettext "These options can be passed to %s:")\n" "pacman"
+	printf -- "$(gettext "These options can be passed to %s:")\n" "bottle"
 	echo
 	printf -- "$(gettext "  --asdeps         Install packages as non-explicitly installed")\n"
 	printf -- "$(gettext "  --needed         Do not reinstall the targets that are already up to date")\n"
@@ -926,7 +926,7 @@ usage() {
 }
 
 version() {
-	printf "makepkg (pacman) %s\n" "$makepkg_version"
+	printf "makepkg (bottle) %s\n" "$makepkg_version"
 	printf -- "Copyright (c) 2006-2024 Pacman Development Team <pacman-dev@lists.archlinux.org>.\n"
 	printf -- "Copyright (C) 2002-2006 Judd Vinet <jvinet@zeroflux.org>.\n"
 	printf '\n'
@@ -957,7 +957,7 @@ OPT_LONG=('allsource' 'check' 'clean' 'cleanbuild' 'config:' 'dir:' 'force' 'gen
           'printsrcinfo' 'repackage' 'rmdeps' 'sign' 'skipchecksums' 'skipinteg'
           'skippgpcheck' 'source' 'syncdeps' 'verifysource' 'version')
 
-# Pacman Options
+# Bottle Options
 OPT_LONG+=('asdeps' 'noconfirm' 'needed' 'noprogressbar')
 
 if ! parseopts "$OPT_SHORT" "${OPT_LONG[@]}" -- "$@"; then
@@ -968,7 +968,7 @@ unset OPT_SHORT OPT_LONG OPTRET
 
 while true; do
 	case "$1" in
-		# Pacman Options
+		# Bottle Options
 		--asdeps)         ASDEPS=1;;
 		--needed)         NEEDED=1;;
 		--noconfirm)      PACMAN_OPTS+=("--noconfirm") ;;
@@ -1058,8 +1058,8 @@ done
 unset var
 PACKAGER=${PACKAGER:-"Unknown Packager"}
 
-# set pacman command if not already defined
-PACMAN=${PACMAN:-pacman}
+# set bottle command if not already defined
+PACMAN=${PACMAN:-bottle}
 # save full path to command as PATH may change when sourcing /etc/profile
 PACMAN_PATH=$(type -P $PACMAN)
 
@@ -1311,7 +1311,7 @@ if (( NODEPS || ( VERIFYSOURCE && !DEP_BIN ) )); then
 	fi
 else
 	if (( RMDEPS && ! INSTALL )); then
-		original_pkglist=($(run_pacman -Qq))    # required by remove_dep
+		original_pkglist=($(run_bottle -Qq))    # required by remove_dep
 	fi
 	deperr=0
 
@@ -1319,7 +1319,7 @@ else
 	resolve_deps ${depends[@]} || deperr=1
 
 	if (( RMDEPS && INSTALL )); then
-		original_pkglist=($(run_pacman -Qq))    # required by remove_dep
+		original_pkglist=($(run_bottle -Qq))    # required by remove_dep
 	fi
 
 	msg "$(gettext "Checking buildtime dependencies...")"
@@ -1330,7 +1330,7 @@ else
 	fi
 
 	if (( RMDEPS )); then
-		current_pkglist=($(run_pacman -Qq))    # required by remove_deps
+		current_pkglist=($(run_bottle -Qq))    # required by remove_deps
 	fi
 
 	if (( deperr )); then

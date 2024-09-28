@@ -6,7 +6,7 @@
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = libalpm
 PROJECT_NUMBER         =
-PROJECT_BRIEF          = "Arch Linux Package Manager Library"
+PROJECT_BRIEF          = "Evolinx Package Manager Library"
 PROJECT_LOGO           =
 OUTPUT_DIRECTORY       = @OUTPUT_DIRECTORY@
 CREATE_SUBDIRS         = NO

@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR "Pacman Development Team <pacman-dev@lists.archlinux.org>"
-# This file is distributed under the same license as the pacman-scripts package.
+# This file is distributed under the same license as the bottle-scripts package.
 #
 # Translators:
 # Algimantas Margevičius <algimantas@margevicius.lt>, 2013
@@ -19,13 +19,13 @@
 # Dan McGee <dpmcgee@gmail.com>, 2011
 msgid ""
 msgstr ""
-"Project-Id-Version: Arch Linux Pacman package manager\n"
-"Report-Msgid-Bugs-To: https://gitlab.archlinux.org/pacman/pacman/-/issues\n"
+"Project-Id-Version: Evolinx Bottle package manager\n"
+"Report-Msgid-Bugs-To: https://gitlab.archlinux.org/bottle/bottle/-/issues\n"
 "POT-Creation-Date: 2024-07-14 19:10+1000\n"
 "PO-Revision-Date: 2011-08-08 22:35+0000\n"
 "Last-Translator: Dan McGee <dpmcgee@gmail.com>, 2011\n"
 "Language-Team: Lithuanian (http://app.transifex.com/toofishes/archlinux-"
-"pacman/language/lt/)\n"
+"bottle/language/lt/)\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,8 +96,8 @@ msgid "Aborting..."
 msgstr "Nutraukiama..."
 
 #: scripts/makepkg.sh.in:253
-msgid "Pacman is currently in use, please wait..."
-msgstr "Šiuo metu Pacman yra naudojama, palaukite..."
+msgid "Bottle is currently in use, please wait..."
+msgstr "Šiuo metu Bottle yra naudojama, palaukite..."
 
 #: scripts/makepkg.sh.in:274
 msgid "'%s' returned a fatal error (%i): %s"
@@ -214,14 +214,14 @@ msgid "Part of the package group has already been built. (use %s to overwrite)"
 msgstr "Dalis paketo jau sukurta. (naudok %s perrašyt)"
 
 #: scripts/makepkg.sh.in:876
-msgid "Make packages compatible for use with pacman"
-msgstr "Padaryti paketus suderinamus naudojimui su pacman"
+msgid "Make packages compatible for use with bottle"
+msgstr "Padaryti paketus suderinamus naudojimui su bottle"
 
-#: scripts/makepkg.sh.in:878 scripts/pacman-db-upgrade.sh.in:41
+#: scripts/makepkg.sh.in:878 scripts/bottle-db-upgrade.sh.in:41
 msgid "Usage: %s [options]"
 msgstr "Naudojimas: %s [pasirinktys]"
 
-#: scripts/makepkg.sh.in:880 scripts/pacman-key.sh.in:82
+#: scripts/makepkg.sh.in:880 scripts/bottle-key.sh.in:82
 msgid "Options:"
 msgstr "Pasirinktys:"
 
@@ -413,8 +413,8 @@ msgstr "  --noprogressbar  Nerodyti pažangos juostos parsiunčiant failus"
 msgid "If %s is not specified, %s will look for '%s'"
 msgstr "Jei %s nenurodytas, %s ieškos „%s“"
 
-#: scripts/makepkg.sh.in:933 scripts/pacman-db-upgrade.sh.in:57
-#: scripts/pacman-key.sh.in:99 scripts/repo-add.sh.in:104
+#: scripts/makepkg.sh.in:933 scripts/bottle-db-upgrade.sh.in:57
+#: scripts/bottle-key.sh.in:99 scripts/repo-add.sh.in:104
 msgid ""
 "This is free software; see the source for copying conditions.\\nThere is NO "
 "WARRANTY, to the extent permitted by law.\\n"
@@ -517,132 +517,132 @@ msgstr "Paketo katalogas paruoštas."
 msgid "Finished making: %s"
 msgstr "Sukurta: %s"
 
-#: scripts/pacman-db-upgrade.sh.in:39
-msgid "Upgrade the local pacman database to a newer format"
-msgstr "Atnaujinti vietinę pacman duomenų bazę į naujesnį formatą"
+#: scripts/bottle-db-upgrade.sh.in:39
+msgid "Upgrade the local bottle database to a newer format"
+msgstr "Atnaujinti vietinę bottle duomenų bazę į naujesnį formatą"
 
-#: scripts/pacman-db-upgrade.sh.in:43
+#: scripts/bottle-db-upgrade.sh.in:43
 msgid "options:"
 msgstr "pasirinktys:"
 
-#: scripts/pacman-db-upgrade.sh.in:44
+#: scripts/bottle-db-upgrade.sh.in:44
 msgid "  -d, --dbpath <path>  set an alternate database location"
 msgstr "  -d, --dbpath <kelias>  nustatyti alternatyvią duomenų bazės vietą"
 
-#: scripts/pacman-db-upgrade.sh.in:45
+#: scripts/bottle-db-upgrade.sh.in:45
 msgid "  -h, --help           show this help message and exit"
 msgstr "  -h, --help           parodyti šį pagalbos pranešimą ir išeiti"
 
-#: scripts/pacman-db-upgrade.sh.in:46
+#: scripts/bottle-db-upgrade.sh.in:46
 msgid "  -r, --root <path>    set an alternate installation root"
 msgstr ""
 "  -r, --root <kelias>    nustatyti alternatyvų įdiegimo šakninį katalogą"
 
-#: scripts/pacman-db-upgrade.sh.in:47
+#: scripts/bottle-db-upgrade.sh.in:47
 msgid "  -V, --version        show version information and exit"
 msgstr "  -V, --version        parodyti programos versiją ir išeiti"
 
-#: scripts/pacman-db-upgrade.sh.in:48
+#: scripts/bottle-db-upgrade.sh.in:48
 msgid "  --config <path>      set an alternate configuration file"
 msgstr "  --config <kelias>      nustatyti alternatyvų konfigūracijos failą"
 
-#: scripts/pacman-db-upgrade.sh.in:49
+#: scripts/bottle-db-upgrade.sh.in:49
 msgid "  --nocolor            disable colorized output messages"
 msgstr "  --nocolor            išjungti spalvotus išvesties pranešimus"
 
-#: scripts/pacman-db-upgrade.sh.in:122 scripts/repo-add.sh.in:396
+#: scripts/bottle-db-upgrade.sh.in:122 scripts/repo-add.sh.in:396
 msgid "%s does not exist or is not a directory."
 msgstr "%s neegzistuoja arba tai ne aplankas."
 
-#: scripts/pacman-db-upgrade.sh.in:126
-msgid "%s is not a pacman database directory."
-msgstr "%s ne pacman duomenų bazės aplankas."
+#: scripts/bottle-db-upgrade.sh.in:126
+msgid "%s is not a bottle database directory."
+msgstr "%s ne bottle duomenų bazės aplankas."
 
-#: scripts/pacman-db-upgrade.sh.in:130
+#: scripts/bottle-db-upgrade.sh.in:130
 msgid "You must have correct permissions to upgrade the database."
 msgstr "Tau reikia turėt reikiamas teises norint atnaujint duomenų bazes."
 
-#: scripts/pacman-db-upgrade.sh.in:140
-msgid "Pacman lock file was found. Cannot run while pacman is running."
-msgstr "Rastas Pacman užrakinimo failas. Negaliu veikti kol pacman veikia."
+#: scripts/bottle-db-upgrade.sh.in:140
+msgid "Bottle lock file was found. Cannot run while bottle is running."
+msgstr "Rastas Bottle užrakinimo failas. Negaliu veikti kol bottle veikia."
 
-#: scripts/pacman-db-upgrade.sh.in:152
+#: scripts/bottle-db-upgrade.sh.in:152
 msgid "Pre-3.5 database format detected - upgrading..."
 msgstr "Aptiktas pre-3.5 duomenų bazės formatas - atnaujinama..."
 
-#: scripts/pacman-db-upgrade.sh.in:159
+#: scripts/bottle-db-upgrade.sh.in:159
 msgid "Done."
 msgstr "Atlikta."
 
-#: scripts/pacman-db-upgrade.sh.in:163
+#: scripts/bottle-db-upgrade.sh.in:163
 msgid "Pre-4.2 database format detected - upgrading..."
 msgstr "Aptiktas pre-4.2 duomenų bazės formatas - atnaujinama..."
 
-#: scripts/pacman-db-upgrade.sh.in:185
-msgid "symlink '%s' points outside pacman root, manual repair required"
+#: scripts/bottle-db-upgrade.sh.in:185
+msgid "symlink '%s' points outside bottle root, manual repair required"
 msgstr ""
-"simbolinė nuoroda \"%s\" nurodo už pacman root ribų, reikalingas taisymas "
+"simbolinė nuoroda \"%s\" nurodo už bottle root ribų, reikalingas taisymas "
 "rankiniu būdu"
 
-#: scripts/pacman-key.sh.in:58
+#: scripts/bottle-key.sh.in:58
 msgid "Usage: %s [options] operation [targets]"
 msgstr "Naudojimas: %s [parinktys] operacija [paketai]"
 
-#: scripts/pacman-key.sh.in:60
-msgid "Manage pacman's list of trusted keys"
-msgstr "Pacman patikimų raktų sąrašo tvarkymas."
+#: scripts/bottle-key.sh.in:60
+msgid "Manage bottle's list of trusted keys"
+msgstr "Bottle patikimų raktų sąrašo tvarkymas."
 
-#: scripts/pacman-key.sh.in:62
+#: scripts/bottle-key.sh.in:62
 msgid "Operations:"
 msgstr "Operacijos:"
 
-#: scripts/pacman-key.sh.in:63
+#: scripts/bottle-key.sh.in:63
 msgid "  -a, --add                 Add the specified keys (empty for stdin)"
 msgstr "  -a, --add                 Pridėti nurodytus raktus (tuščia stdin)"
 
-#: scripts/pacman-key.sh.in:64
+#: scripts/bottle-key.sh.in:64
 msgid "  -d, --delete              Remove the specified keyids"
 msgstr "  -d, --delete              Pašalinti nurodytus keyids"
 
-#: scripts/pacman-key.sh.in:65
+#: scripts/bottle-key.sh.in:65
 msgid "  -e, --export              Export the specified or all keyids"
 msgstr "  -e, --export              Eksportuoti nurodytus arba visus keyids"
 
-#: scripts/pacman-key.sh.in:66
+#: scripts/bottle-key.sh.in:66
 msgid ""
 "  -f, --finger              List fingerprint for specified or all keyids"
 msgstr ""
 "  -f, --finger              Parodyti fingerprint sąrašą nurodytiems arba "
 "visiems keyid"
 
-#: scripts/pacman-key.sh.in:67
+#: scripts/bottle-key.sh.in:67
 msgid "  -l, --list-keys           List the specified or all keys"
 msgstr "  -l, --list-keys           Parodyti nurodytų arba visų raktų sąrašą"
 
-#: scripts/pacman-key.sh.in:68
+#: scripts/bottle-key.sh.in:68
 msgid "  -r, --recv-keys           Fetch the specified keyids"
 msgstr "  -r, --recv-keys           Gauti nurodytus keyid"
 
-#: scripts/pacman-key.sh.in:69
-msgid "  -u, --updatedb            Update the trustdb of pacman"
-msgstr "  -u, --updatedb            Atnaujinti patikimas pacman duomenų bazes"
+#: scripts/bottle-key.sh.in:69
+msgid "  -u, --updatedb            Update the trustdb of bottle"
+msgstr "  -u, --updatedb            Atnaujinti patikimas bottle duomenų bazes"
 
-#: scripts/pacman-key.sh.in:70
+#: scripts/bottle-key.sh.in:70
 msgid ""
 "  -v, --verify              Verify the file(s) specified by the signature(s)"
 msgstr ""
 "  -v, --verify              Patikrinti failą (-us) pagal nurodytus parašus"
 
-#: scripts/pacman-key.sh.in:71
+#: scripts/bottle-key.sh.in:71
 msgid ""
 "  --edit-key                Present a menu for key management task on keyids"
 msgstr "  --edit-key                Iškviesti raktų tvarkymo meniu"
 
-#: scripts/pacman-key.sh.in:72
+#: scripts/bottle-key.sh.in:72
 msgid "  --import                  Imports pubring.gpg from dir(s)"
 msgstr "  --import                  Importuoja pubring.gpg iš aplanko(ų)"
 
-#: scripts/pacman-key.sh.in:73
+#: scripts/bottle-key.sh.in:73
 msgid ""
 "  --import-trustdb          Imports ownertrust values from trustdb.gpg in "
 "dir(s)"
@@ -650,20 +650,20 @@ msgstr ""
 "  --import-trustdb          Importuoja savininko pasitikėjimo reikšmes iš "
 "trustdb.gpg aplanke(-uose)"
 
-#: scripts/pacman-key.sh.in:74
+#: scripts/bottle-key.sh.in:74
 msgid "  --init                    Ensure the keyring is properly initialized"
 msgstr ""
 "  --init                    Užtikrinti jog raktų saugykla tinkamai inicijuota"
 
-#: scripts/pacman-key.sh.in:75
+#: scripts/bottle-key.sh.in:75
 msgid "  --list-sigs               List keys and their signatures"
 msgstr "  --list-sigs               Parodyti raktų ir jų parašų sąrašą"
 
-#: scripts/pacman-key.sh.in:76
+#: scripts/bottle-key.sh.in:76
 msgid "  --lsign-key               Locally sign the specified keyid"
 msgstr "  --lsign-key               Pasirašyti lokaliai nurodytą keyid"
 
-#: scripts/pacman-key.sh.in:77
+#: scripts/bottle-key.sh.in:77
 msgid ""
 "  --populate                Reload the default keys from the (given) "
 "keyrings\\n                            in '%s'"
@@ -671,18 +671,18 @@ msgstr ""
 "  --populate                Perkrauti numatytus raktus iš (duotosios) "
 "raktinės\\n                             „%s“"
 
-#: scripts/pacman-key.sh.in:79
+#: scripts/bottle-key.sh.in:79
 msgid ""
 "  --refresh-keys            Update specified or all keys from a keyserver"
 msgstr ""
 "  --refresh-keys            Atnaujinti nurodytus arba visus raktus iš raktų "
 "serverio"
 
-#: scripts/pacman-key.sh.in:80
+#: scripts/bottle-key.sh.in:80
 msgid "  --verbose                 Show extra information"
 msgstr "  --verbose                 Rodyti papildomą informaciją"
 
-#: scripts/pacman-key.sh.in:83
+#: scripts/bottle-key.sh.in:83
 msgid ""
 "  --config <file>           Use an alternate config file (instead "
 "of\\n                            '%s')"
@@ -690,7 +690,7 @@ msgstr ""
 "  --config <failas>           Naudoti alternatyvų konfigūracijos failą "
 "(vietoj\\n                    „%s“)"
 
-#: scripts/pacman-key.sh.in:85
+#: scripts/bottle-key.sh.in:85
 msgid ""
 "  --gpgdir <dir>            Set an alternate directory for GnuPG "
 "(instead\\n                            of '%s')"
@@ -698,7 +698,7 @@ msgstr ""
 "  --gpgdir <dir>            Nurodyti alternatyvų GnuPG aplanką "
 "(vietoj\\n                             „%s“)"
 
-#: scripts/pacman-key.sh.in:87
+#: scripts/bottle-key.sh.in:87
 msgid ""
 "  --populate-from <dir>     Set an alternate directory for --populate "
 "(instead\\n                            of '%s')"
@@ -706,92 +706,92 @@ msgstr ""
 "  --populate-from <dir>     Nustatyti alternatyvųjį katalogą, skirtą --"
 "populate (vietoj\\n                            „%s“)"
 
-#: scripts/pacman-key.sh.in:89
+#: scripts/bottle-key.sh.in:89
 msgid "  --keyserver <server-url>  Specify a keyserver to use if necessary"
 msgstr "  --keyserver <serverio-url>  Nurodykite raktų serverį"
 
-#: scripts/pacman-key.sh.in:91
+#: scripts/bottle-key.sh.in:91
 msgid "  -h, --help                Show this help message and exit"
 msgstr "  -h, --help                Parodyti šį pagalbos pranešimą ir išeiti"
 
-#: scripts/pacman-key.sh.in:92
+#: scripts/bottle-key.sh.in:92
 msgid "  -V, --version             Show program version"
 msgstr "  -V, --version             Parodyti programos versiją"
 
-#: scripts/pacman-key.sh.in:134
+#: scripts/bottle-key.sh.in:134
 msgid "Failed to lookup key by name:"
 msgstr "Nepavyko rasti rakto pagal vardą:"
 
-#: scripts/pacman-key.sh.in:142
+#: scripts/bottle-key.sh.in:142
 msgid "Key name is ambiguous:"
 msgstr "Rakto vardas yra dviprasmis:"
 
-#: scripts/pacman-key.sh.in:150
-msgid "Generating pacman master key. This may take some time."
-msgstr "Generuojamas pagrindinis pacman raktas. Tai gali šiek tiek užtrukti."
+#: scripts/bottle-key.sh.in:150
+msgid "Generating bottle master key. This may take some time."
+msgstr "Generuojamas pagrindinis bottle raktas. Tai gali šiek tiek užtrukti."
 
-#: scripts/pacman-key.sh.in:187
+#: scripts/bottle-key.sh.in:187
 msgid "The key identified by %s could not be found locally."
 msgstr "Atpažintas %s, nerastas lokaliai."
 
-#: scripts/pacman-key.sh.in:198 scripts/pacman-key.sh.in:210
+#: scripts/bottle-key.sh.in:198 scripts/bottle-key.sh.in:210
 #: scripts/libmakepkg/integrity/verify_signature.sh.in:219
 msgid "_"
 msgstr "_"
 
-#: scripts/pacman-key.sh.in:210
+#: scripts/bottle-key.sh.in:210
 msgid "flags"
 msgstr "vėliavėlės"
 
-#: scripts/pacman-key.sh.in:264
+#: scripts/bottle-key.sh.in:264
 msgid "You do not have sufficient permissions to read the %s keyring."
 msgstr "Neturi pakankamų teisių skaityti %s raktinę."
 
-#: scripts/pacman-key.sh.in:265
+#: scripts/bottle-key.sh.in:265
 msgid "Use '%s' to correct the keyring permissions."
 msgstr "Naudokite %s ištaisyti raktinės teises."
 
-#: scripts/pacman-key.sh.in:270
+#: scripts/bottle-key.sh.in:270
 msgid "You do not have sufficient permissions to run this command."
 msgstr "Neturite pakankamų teisių vykdyti šią komandą."
 
-#: scripts/pacman-key.sh.in:276
+#: scripts/bottle-key.sh.in:276
 msgid "There is no secret key available to sign with."
 msgstr "Nėra prieinamo slapto rakto kuriuo galima būtų pasirašyti."
 
-#: scripts/pacman-key.sh.in:277
+#: scripts/bottle-key.sh.in:277
 msgid "Use '%s' to generate a default secret key."
 msgstr "Naudokite „%s“ sukurti numatytąjį slaptą raktą."
 
-#: scripts/pacman-key.sh.in:295
+#: scripts/bottle-key.sh.in:295
 msgid "No keyring files exist in %s."
 msgstr "Aplanke %s raktinės failų nėra."
 
-#: scripts/pacman-key.sh.in:302
+#: scripts/bottle-key.sh.in:302
 msgid "The keyring file %s does not exist."
 msgstr "Raktinės failas %s neegzistuoja."
 
-#: scripts/pacman-key.sh.in:317
+#: scripts/bottle-key.sh.in:317
 msgid "Appending keys from %s.gpg..."
 msgstr "Pridedami raktai iš %s.gpg..."
 
-#: scripts/pacman-key.sh.in:357
+#: scripts/bottle-key.sh.in:357
 msgid "Locally signing trusted keys in keyring..."
 msgstr "Patikimi raktai pasirašomi lokaliai raktinėj..."
 
-#: scripts/pacman-key.sh.in:359
+#: scripts/bottle-key.sh.in:359
 msgid "Importing owner trust values..."
 msgstr "Importuojamos patikimos savininko reikšmės..."
 
-#: scripts/pacman-key.sh.in:369
+#: scripts/bottle-key.sh.in:369
 msgid "Disabling revoked keys in keyring..."
 msgstr "Raktinėj išjungiami atšaukti raktai ..."
 
-#: scripts/pacman-key.sh.in:372
+#: scripts/bottle-key.sh.in:372
 msgid "Disabling key %s..."
 msgstr "Uždraudžiamas raktas %s..."
 
-#: scripts/pacman-key.sh.in:378
+#: scripts/bottle-key.sh.in:378
 msgid "Disabled %s key."
 msgid_plural "Disabled %s keys."
 msgstr[0] "Išjungtas %s raktas."
@@ -799,51 +799,51 @@ msgstr[1] "Išjungti %s raktai."
 msgstr[2] "Išjungta %s raktų."
 msgstr[3] "Išjungtas %s raktas."
 
-#: scripts/pacman-key.sh.in:385
+#: scripts/bottle-key.sh.in:385
 msgid "A specified keyfile could not be added to the keyring."
 msgstr "Nurodyto rakto pridėti į raktinę nepavyko."
 
-#: scripts/pacman-key.sh.in:393
+#: scripts/bottle-key.sh.in:393
 msgid "A specified key could not be removed from the keyring."
 msgstr "Pašalinti nurodyto rakto, iš raktinės, nepavyko."
 
-#: scripts/pacman-key.sh.in:403
+#: scripts/bottle-key.sh.in:403
 msgid "The key identified by %s could not be edited."
 msgstr "Negalima redaguoti rakto atpažinto kaip %s."
 
-#: scripts/pacman-key.sh.in:415
+#: scripts/bottle-key.sh.in:415
 msgid "A specified key could not be exported from the keyring."
 msgstr "Nurodyto rakto eksportuoti iš raktinės nepavyko."
 
-#: scripts/pacman-key.sh.in:423
+#: scripts/bottle-key.sh.in:423
 msgid "The fingerprint of a specified key could not be determined."
 msgstr "Nurodyto rakto pirštų antspaudai nenustatyti."
 
-#: scripts/pacman-key.sh.in:436 scripts/pacman-key.sh.in:455
+#: scripts/bottle-key.sh.in:436 scripts/bottle-key.sh.in:455
 msgid "%s could not be imported."
 msgstr "Nepavyko importuoti %s."
 
-#: scripts/pacman-key.sh.in:440 scripts/pacman-key.sh.in:459
+#: scripts/bottle-key.sh.in:440 scripts/bottle-key.sh.in:459
 msgid "File %s does not exist and could not be imported."
 msgstr "Failas %s neegzistuoja ir negali būti importuotas."
 
-#: scripts/pacman-key.sh.in:471
+#: scripts/bottle-key.sh.in:471
 msgid "A specified key could not be listed."
 msgstr "Parodyti nurodyto failo nepavyko."
 
-#: scripts/pacman-key.sh.in:479
+#: scripts/bottle-key.sh.in:479
 msgid "A specified signature could not be listed."
 msgstr "Parodyti nurodyto parašo nepavyko."
 
-#: scripts/pacman-key.sh.in:491
+#: scripts/bottle-key.sh.in:491
 msgid "Locally signing key %s..."
 msgstr "Lokaliai pasirašomas raktas %s..."
 
-#: scripts/pacman-key.sh.in:496
+#: scripts/bottle-key.sh.in:496
 msgid "%s could not be locally signed."
 msgstr "Pasirašyti %s lokaliai, nepavyko."
 
-#: scripts/pacman-key.sh.in:506
+#: scripts/bottle-key.sh.in:506
 msgid "Locally signed %s key."
 msgid_plural "Locally signed %s keys."
 msgstr[0] "Lokaliai pasirašytas %s raktas."
@@ -851,63 +851,63 @@ msgstr[1] "Lokaliai pasirašyti %s raktai."
 msgstr[2] "Lokaliai pasirašyta %s raktų."
 msgstr[3] "Lokaliai pasirašytas %s raktas."
 
-#: scripts/pacman-key.sh.in:529
+#: scripts/bottle-key.sh.in:529
 msgid "Remote key not fetched correctly from WKD or keyserver."
 msgstr "Gauti nuotolinio rakto iš WKD ar raktų serverio nepavyko."
 
-#: scripts/pacman-key.sh.in:534
+#: scripts/bottle-key.sh.in:534
 msgid "Remote key not fetched correctly from keyserver."
 msgstr "Gauti nutolusio rakto iš raktų serverio nepavyko."
 
-#: scripts/pacman-key.sh.in:566
+#: scripts/bottle-key.sh.in:566
 msgid "Could not update key: %s"
 msgstr "Nepavyko atnaujinti rakto: %s"
 
-#: scripts/pacman-key.sh.in:587 scripts/repo-add.sh.in:268
+#: scripts/bottle-key.sh.in:587 scripts/repo-add.sh.in:268
 msgid "Cannot use armored signatures for packages: %s"
 msgstr "Nepavyksta naudoti šarvuotų parašų paketams: %s"
 
-#: scripts/pacman-key.sh.in:595
+#: scripts/bottle-key.sh.in:595
 msgid "The signature verification for %s failed."
 msgstr "Nepavyko patikrinti %s parašo."
 
-#: scripts/pacman-key.sh.in:601
+#: scripts/bottle-key.sh.in:601
 msgid "The signature %s is not trusted."
 msgstr "Parašas %s yra nepatikimas."
 
-#: scripts/pacman-key.sh.in:609
+#: scripts/bottle-key.sh.in:609
 msgid "Updating trust database..."
 msgstr "Atnaujinama patikima duomenų bazė..."
 
-#: scripts/pacman-key.sh.in:611
+#: scripts/bottle-key.sh.in:611
 msgid "Trust database could not be updated."
 msgstr "Atnaujinti patikimos duomenų bazės nepavyko."
 
-#: scripts/pacman-key.sh.in:690
+#: scripts/bottle-key.sh.in:690
 msgid "Cannot find the %s binary required for all %s operations."
 msgstr "Negaliu rasti %s sukompiliuotos programos reikalingos atlikti %s."
 
-#: scripts/pacman-key.sh.in:695
+#: scripts/bottle-key.sh.in:695
 msgid "%s needs to be run as root for this operation."
 msgstr "%s turi būti įvykdytasu root naudotojo teisėm."
 
-#: scripts/pacman-key.sh.in:701
+#: scripts/bottle-key.sh.in:701
 msgid "%s configuration file '%s' not found."
 msgstr "%s konfigūracijos failas „%s“ nerastas."
 
-#: scripts/pacman-key.sh.in:724
+#: scripts/bottle-key.sh.in:724
 msgid "no operation specified (use -h for help)"
 msgstr "nenurodyta užduotis (naudok -h pagalbai)"
 
-#: scripts/pacman-key.sh.in:729
+#: scripts/bottle-key.sh.in:729
 msgid "Multiple operations specified."
 msgstr "Nurodytos kelios operacijos."
 
-#: scripts/pacman-key.sh.in:730
+#: scripts/bottle-key.sh.in:730
 msgid "Please run %s with each operation separately."
 msgstr "Prašom vykdyti %s su kiekviena užduotimi atskirai."
 
-#: scripts/pacman-key.sh.in:738
+#: scripts/bottle-key.sh.in:738
 msgid "No targets specified"
 msgstr "Nenurodyta paskirčių"
 
@@ -998,9 +998,9 @@ msgstr ""
 
 #: scripts/repo-add.sh.in:93
 msgid ""
-"Example:  repo-add /path/to/repo.db.tar.gz pacman-3.0.0-1-i686.pkg.tar.gz\\n"
+"Example:  repo-add /path/to/repo.db.tar.gz bottle-3.0.0-1-i686.pkg.tar.gz\\n"
 msgstr ""
-"Pavyzdys:  repo-add /kelias/iki/repo.db.tar.gz pacman-3.0.0-1-i686.pkg.tar."
+"Pavyzdys:  repo-add /kelias/iki/repo.db.tar.gz bottle-3.0.0-1-i686.pkg.tar."
 "gz\\n"
 
 #: scripts/repo-add.sh.in:95
@@ -1088,7 +1088,7 @@ msgid "Held by process %s"
 msgstr "Laikomas proceso %s"
 
 #: scripts/repo-add.sh.in:418
-msgid "Repository file '%s' is not a proper pacman database."
+msgid "Repository file '%s' is not a proper bottle database."
 msgstr "Saugyklos failas „%s“ nėra tinkamas duomenų bazei."
 
 #: scripts/repo-add.sh.in:423

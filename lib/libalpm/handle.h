@@ -88,12 +88,12 @@ struct _alpm_handle_t {
 
 	/* filesystem paths */
 	char *root;              /* Root path, default '/' */
-	char *dbpath;            /* Base path to pacman's DBs */
+	char *dbpath;            /* Base path to bottle's DBs */
 	char *logfile;           /* Name of the log file */
 	char *lockfile;          /* Name of the lock file */
 	char *gpgdir;            /* Directory where GnuPG files are stored */
 	char *sandboxuser;       /* User to switch to for sensitive operations */
-	alpm_list_t *cachedirs;  /* Paths to pacman cache directories */
+	alpm_list_t *cachedirs;  /* Paths to bottle cache directories */
 	alpm_list_t *hookdirs;   /* Paths to hook directories */
 	alpm_list_t *overwrite_files; /* Paths that may be overwritten */
 

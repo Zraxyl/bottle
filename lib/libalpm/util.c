@@ -1302,8 +1302,8 @@ cleanup:
 }
 
 /** Parse a full package specifier.
- * @param target package specifier to parse, such as: "pacman-4.0.1-2",
- * "pacman-4.01-2/", or "pacman-4.0.1-2/desc"
+ * @param target package specifier to parse, such as: "bottle-4.0.1-2",
+ * "bottle-4.01-2/", or "bottle-4.0.1-2/desc"
  * @param name to hold package name
  * @param version to hold package version
  * @param name_hash to hold package name hash

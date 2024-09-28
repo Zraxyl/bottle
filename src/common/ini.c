@@ -26,7 +26,7 @@
 #include "util-common.h"
 
 /**
- * @brief Parse a pacman-style INI config file.
+ * @brief Parse a bottle-style INI config file.
  *
  * @param file path to the config file
  * @param cb callback for key/value pairs

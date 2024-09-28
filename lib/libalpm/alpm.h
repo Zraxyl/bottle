@@ -24,7 +24,7 @@
 
 /** @mainpage alpm
  *
- * libalpm is a package management library, primarily used by pacman.
+ * libalpm is a package management library, primarily used by bottle.
  */
 
 #ifndef ALPM_H
@@ -49,7 +49,7 @@ extern "C" {
  *
  *
  *
- * libalpm is a package management library, primarily used by pacman.
+ * libalpm is a package management library, primarily used by bottle.
  * For ease of access, the libalpm manual has been split up into several sections.
  *
  * @section see_also See Also
