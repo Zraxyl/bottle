@@ -1,6 +1,6 @@
 project('bottle',
         'c',
-        version : '2024.4',
+        version : '2025.1',
         license : 'GPLv2+',
         default_options : [
           'c_std=gnu99',
@@ -433,11 +433,19 @@ configure_file(
   configuration : substs,
   install_dir : join_paths(SYSCONFDIR, 'makepkg.conf.d/'))
 
-configure_file(
-  input : 'etc/bottle.conf.in',
-  output : 'bottle.conf',
-  configuration : substs,
-  install_dir : SYSCONFDIR)
+if get_option('is-staging')
+  configure_file(
+    input : 'etc/staging_bottle.conf.in',
+    output : 'bottle.conf',
+    configuration : substs,
+    install_dir : SYSCONFDIR)
+else
+  configure_file(
+    input : 'etc/stable_bottle.conf.in',
+    output : 'bottle.conf',
+    configuration : substs,
+    install_dir : SYSCONFDIR)
+endif
 
 install_data(
   'proto/PKGBUILD-split.proto',
@@ -492,6 +500,7 @@ message('\n    '.join([
   '   template directory      : @0@'.format(get_option('makepkg-template-dir')),
   '',
   'Compilation options:',
+  '  Use staging conf         : @0@'.format(get_option('is-staging')),
   '  i18n support             : @0@'.format(get_option('i18n')),
   '  Build docs               : @0@'.format(build_doc),
   '  debug build              : @0@'.format(get_option('buildtype') == 'debug'),

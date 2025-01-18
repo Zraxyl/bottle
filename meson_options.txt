@@ -1,3 +1,7 @@
+# Zraxyl specific
+option('is-staging', type : 'boolean', value : false,
+       description : 'should bottle use staging repository config or not')
+
 # build behavior
 option('use-git-version', type : 'boolean', value : false,
        description : 'take version information from git')
