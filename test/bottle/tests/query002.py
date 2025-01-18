@@ -7,7 +7,7 @@ p.groups = ["foo"]
 p.url = "http://www.archlinux.org"
 p.license = "GPL2"
 p.arch = "i686"
-p.packager = "Evolinx"
+p.packager = "Zraxyl"
 
 self.addpkg2db("local", p)
 

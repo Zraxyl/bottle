@@ -5,7 +5,7 @@ p.desc = "Overflow size and date values if possible"
 p.url = "http://www.archlinux.org"
 p.license = "GPL2"
 p.arch = "i686"
-p.packager = "Evolinx"
+p.packager = "Zraxyl"
 # size is greater than 4294967295, aka UINT_MAX
 p.size = "10000000000"
 # build date is greater than 2147483647, aka INT_MAX

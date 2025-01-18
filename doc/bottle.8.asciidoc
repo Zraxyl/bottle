@@ -19,7 +19,7 @@ scripts, and the ability to sync your local machine with a remote repository to
 automatically upgrade packages. Bottle packages are a zipped tar format.
 
 Since version 3.0.0, bottle has been the front-end to linkman:libalpm[3], the
-``Evolinx Package Management'' library. This library allows alternative
+``Package Management'' library. This library allows alternative
 front-ends to be written (for instance, a GUI front-end).
 
 Invoking bottle involves specifying an operation with any potential options and

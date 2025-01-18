@@ -1,7 +1,7 @@
 README
 ======
 
-pactest is a test suite for the Evolinx package manager: bottle.
+pactest is a test suite for the Zraxyl package manager: bottle.
 
 It has a rather high level view of operations performed by bottle: it
 automatically creates a test environment based on a test case file
@@ -9,7 +9,7 @@ description, the run bottle, and finally check the results of test according
 to a set of rules defined in the test case.
 
 It is written in Python and makes available most of what can be found in
-bottle's code to create Evolinx packages or read and write databases entries.
+bottle's code to create Zraxyl packages or read and write databases entries.
 
 Each test case is defined in a separate file that is sourced in order to set
 the environment.
@@ -149,7 +149,7 @@ Example:
 	pkg1 = pmpkg("dummy", "2.1-1")
 	pkg2 = pmpkg("foobar")
 
-All fields from a Evolinx package can be set and modified directly with no
+All fields from a Zraxyl package can be set and modified directly with no
 methods to access them.
 Note: some fields are automatically set by pactest and should preferably not
 be modified by hand (i.e. "md5sum", "size", or "csize").

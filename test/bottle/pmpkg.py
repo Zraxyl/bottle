@@ -23,7 +23,7 @@ import util
 class pmpkg(object):
     """Package object.
 
-    Object holding data from an Evolinx package.
+    Object holding data from an Zraxyl package.
     """
 
     def __init__(self, name, version = "1.0-1"):
@@ -104,7 +104,7 @@ class pmpkg(object):
         return buf.getvalue()
 
     def makepkg(self, path=None, fileobj=None):
-        """Creates an Evolinx package archive.
+        """Creates an Zraxyl package archive.
 
         A package archive is generated in the location 'path', based on the data
         from the object.

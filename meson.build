@@ -359,7 +359,7 @@ pkgconfig = import('pkgconfig')
 pkgconfig.generate(
   libalpm,
   name : 'libalpm',
-  description : 'Evolinx package management library',
+  description : 'Package management library',
   version : libalpm_version,
   url : 'http://archlinux.org/bottle/',
   extra_cflags: [ '-D_FILE_OFFSET_BITS=64' ],

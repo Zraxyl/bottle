@@ -383,7 +383,7 @@ static alpm_pkg_t *load_pkg_for_entry(alpm_db_t *db, const char *entryname,
 
 /* This function doesn't work as well as one might think, as size of database
  * entries varies considerably. Adding signatures nearly doubles the size of a
- * single entry. These  current values are heavily influenced by Evolinx;
+ * single entry. These  current values are heavily influenced by Zraxyl;
  * databases with a single signature per package. */
 static size_t estimate_package_count(struct stat *st, struct archive *archive)
 {

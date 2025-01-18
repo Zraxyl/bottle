@@ -8,7 +8,7 @@ sp.groups = ["foo"]
 sp.url = "http://www.archlinux.org"
 sp.license = "GPL2"
 sp.arch = "i686"
-sp.packager = "Evolinx"
+sp.packager = "Zraxyl"
 sp.md5sum = "00000000000000000000000000000000"
 
 self.addpkg2db("sync", sp)

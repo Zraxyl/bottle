@@ -9,7 +9,7 @@ p.license = "GPL2"
 p.arch = "i686"
 # test new style date
 p.builddate = "1196640127"
-p.packager = "Evolinx"
+p.packager = "Zraxyl"
 
 self.addpkg2db("local", p)
 

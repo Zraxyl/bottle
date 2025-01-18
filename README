@@ -1,7 +1,7 @@
 ALPM library overview & internals
 =================================
 
-Here is a list of the main objects and files from the ALPM (i.e. Evolinx
+Here is a list of the main objects and files from the ALPM (i.e. Zraxyl
 Package Management) library. This document, while not exhaustive, also
 indicates some limitations (on purpose, or sometimes due to its poor design) of
 the library at the present time.

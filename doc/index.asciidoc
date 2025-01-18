@@ -22,7 +22,7 @@ this, packages would have to be installed manually using the '\--add' and
 '\--upgrade' operations.
 
 Version 3.0 was the switch to a two-part bottle -- a back-end named libalpm
-(library for Evolinx Package Management) and the familiar bottle front-end.
+(library for Package Management) and the familiar bottle front-end.
 Speed in many cases was improved, along with dependency and conflict resolution
 being able to handle a much wider variety of cases. The switch to a
 library-based program should also make it easier in the future to develop
@@ -214,14 +214,14 @@ Development
 
 Mailing List
 ~~~~~~~~~~~~
-There is a mailing list devoted to bottle development, hosted by Evolinx.
+There is a mailing list devoted to bottle development, hosted by Zraxyl.
 link:https://lists.archlinux.org/listinfo/bottle-dev/[Subscribe] or
 link:https://lists.archlinux.org/pipermail/bottle-dev/[view the archives].
 
 Source Code
 ~~~~~~~~~~~
 Development of bottle is currently done in Git. The central repository is
-hosted by Evolinx, although some of the developers have their own trees (ask
+hosted by Zraxyl, although some of the developers have their own trees (ask
 on the above mailing lists if you are interested in finding the locations of
 these trees).
 
